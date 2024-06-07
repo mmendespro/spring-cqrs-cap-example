@@ -1,0 +1,21 @@
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+    "title": "Implementing Domain-Driven Design",
+    "author": "Vaughn Vernon",
+    "year": 2015
+}
+
+###
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+    "title": "Domain-Driven Design Distilled",
+    "author": "Vaughn Vernon",
+    "year": 2016
+}
+
+###
+DELETE http://localhost:8080/books/7536d9fd-d73f-4af6-8275-3f22b6165a0e

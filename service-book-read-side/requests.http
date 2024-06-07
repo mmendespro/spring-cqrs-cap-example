@@ -1,0 +1,4 @@
+GET http://localhost:8081/books
+
+###
+GET http://localhost:8081/books/17f34bba-f49b-493a-9fc1-ef706c964dba

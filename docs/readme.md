@@ -36,4 +36,4 @@ O Teorema CAP afirma que em um sistema distribuído, é impossível garantir sim
 
 ## Conclusão
 
-A motivação por tras deste exemplo é fazer uma abordagem poderosa para lidar com operações de leitura e escrita de forma eficiente e escalável. Separando responsabilidades, ele melhorando a manutenção e o desempenho do sistema.
+A motivação por tras deste exemplo é fazer uma abordagem poderosa para lidar com operações de leitura e escrita de forma eficiente e escalável. Separando responsabilidades, e melhorando a manutenção e o desempenho do sistema.

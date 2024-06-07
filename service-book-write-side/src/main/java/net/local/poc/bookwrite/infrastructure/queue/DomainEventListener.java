@@ -1,4 +1,4 @@
-package net.local.poc.bookwrite.infrastructure.listeners;
+package net.local.poc.bookwrite.infrastructure.queue;
 
 import java.util.UUID;
 
@@ -14,12 +14,12 @@ import net.local.poc.bookwrite.domain.events.AbstractDomainEvent;
 
 @Slf4j
 @Component
-public class BookListener {
+public class DomainEventListener {
     
     private final EventStore eventStore;
     private final RabbitTemplate rabbitTemplate;
 
-    public BookListener(EventStore eventStore, RabbitTemplate rabbitTemplate) {
+    public DomainEventListener(EventStore eventStore, RabbitTemplate rabbitTemplate) {
         this.eventStore = eventStore;
         this.rabbitTemplate = rabbitTemplate;
     }

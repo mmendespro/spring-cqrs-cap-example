@@ -1,4 +1,28 @@
-# CQRS
+# Arquiteturas e designs mais utilizados
+
+## Dependency Injection (DI)
+
+Esse padrão não é um padrão de arquitetura de código em si, mas é frequentemente usado em conjunto com outros padrões de arquitetura de código para gerenciar dependências entre objetos. DI permite que objetos sejam construídos com suas dependências injetadas, em vez de ter que criá-los internamente.
+
+Esse padrão facilita o gerenciamento de gráficos de objetos complexos e a substituição de componentes por stubs ou objetos simulados para fins de teste.
+
+![code-design-architecture.png](./img/code-design-architecture.png)
+
+## Clean Architecture
+
+A **Clean Architecture** é um conjunto de práticas e princípios de design de software que visam criar sistemas robustos, escaláveis e de fácil manutenção. Ela enfatiza a separação de responsabilidades, a modularidade e a clareza do código, garantindo que cada componente do sistema tenha uma função bem definida e que a lógica de negócios seja isolada de detalhes de implementação. Em resumo, a arquitetura limpa busca promover a organização e a legibilidade do código, facilitando sua evolução e adaptação a novos requisitos.
+
+![clean_architecture.jpg](./img/clean-architecture.jpg)
+
+## Hexagonal Architecture (Ports and Adapters)
+
+A **Hexagonal Architecture** é um estilo arquitetônico proposto por Alistair Cockburn que se concentra em manter a lógica de negócios separada das preocupações externas.
+
+![hexagonal_architecture.png](./img/hexagonal-architecture.png)
+
+O núcleo de negócios interage com outros componentes por meio de portas e adaptadores. Dessa forma, podemos mudar as tecnologias subjacentes sem ter que modificar o núcleo do aplicativo. Como podemos notar pelo diagrama acima, os objetivos de uma **Hexagonal Architecture** são parecidos com os da **Clean Architecture**.
+
+## CQRS
 
 O padrão CQRS (Command Query Responsibility Segregation) é uma abordagem de design de software que separa a leitura e a escrita de dados em diferentes modelos.
 

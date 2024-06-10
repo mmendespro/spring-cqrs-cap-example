@@ -64,7 +64,7 @@ Para este exemplo faremos dois microsserviços, um responsável pela escrita dos
 
 A base de leitura será atualizada por um processo assincrono utilizando o RabbitMQ a fim de emular o padrão Transactional Outbox, mas poderia ser substituido facilmente por uma ferramenta de CDC de mercado, ou pelo mesmo processo via Kafka Connector com Debezium.
 
-![diagram.png](./img/diagram.png)
+![solution-diagram.png](./img/solution-diagram.png)
 
 # Conclusão
 

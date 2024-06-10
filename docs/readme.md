@@ -48,7 +48,7 @@ Lembrando sempre que:
 - **Consultas**: Retornam dados sem modificar o estado.
 - **Modelos separados**: Um para leitura e outro para escrita.
 
-As operações de Sync entre os modelos de dados (query model e command model) podem ser feitas de muitas formas, desde o uso de CDC (Change Data Capture), ou Usando o Transactional Outbox Pattern, ou da forma simplória como foi abordada neste exemplo.
+As operações de Sync entre os modelos de dados (query model e command model) podem ser feitas de muitas formas, desde o uso de CDC (Change Data Capture), ou usando o Transactional Outbox Pattern, ou da forma simplória como foi abordada neste exemplo.
 
 ## Teorema de CAP (Consistency, Availability, Partition Tolerance)
 

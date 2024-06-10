@@ -37,7 +37,7 @@ public class Book {
         return "Book [bookId=" + bookId + ", title=" + title + ", author=" + author + ", year=" + year + "]";
     }
 
-    public static Book of(UUID bookId, String title, String author, int year) {
-        return new Book(bookId, title, author, year);
+    public static Book of(String title, String author, int year) {
+        return new Book(UUID.randomUUID(), title, author, year);
     }
 }

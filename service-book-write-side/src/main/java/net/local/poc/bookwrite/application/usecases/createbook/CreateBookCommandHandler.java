@@ -32,7 +32,7 @@ public class CreateBookCommandHandler implements CommandHandler<CreateBookComman
             throw new RuntimeException(MessageFormat.format("Book {0} already exists", book.getTitle()));
         });
         
-        var newBook = Book.of(UUID.randomUUID(), command.getTitle(), command.getAuthor(), command.getYear());
+        var newBook = Book.of(command.getTitle(), command.getAuthor(), command.getYear());
         gateway.save(newBook);
 
         var event = BookCreatedEvent.of(mapper, newBook);

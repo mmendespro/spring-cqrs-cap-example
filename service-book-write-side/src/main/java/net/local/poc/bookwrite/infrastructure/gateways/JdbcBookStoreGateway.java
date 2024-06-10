@@ -22,14 +22,22 @@ public class JdbcBookStoreGateway implements BookStore {
     public Optional<Book> load(UUID bookId) {
         return jdbcClient.sql("SELECT BOOK_ID, TITLE, AUTHOR, BOOK_YEAR FROM BOOKS WHERE BOOK_ID = :bookId")
                          .param("bookId", bookId)
-                         .query((rs, rowNum) -> new Book(UUID.fromString(rs.getString("BOOK_ID")), rs.getString("TITLE"), rs.getString("AUTHOR"), rs.getInt("BOOK_YEAR")) ).optional();
+                         .query((rs, rowNum) -> new Book(UUID.fromString(rs.getString("BOOK_ID")), 
+                                                         rs.getString("TITLE"), 
+                                                         rs.getString("AUTHOR"), 
+                                                         rs.getInt("BOOK_YEAR")))
+                         .optional();
     }
 
     @Override
     public Optional<Book> loadByTitle(String bookTitle) {
         return jdbcClient.sql("SELECT BOOK_ID, TITLE, AUTHOR, BOOK_YEAR FROM BOOKS WHERE TITLE = :title")
                          .param("title", bookTitle)
-                         .query((rs, rowNum) -> new Book(UUID.fromString(rs.getString("BOOK_ID")), rs.getString("TITLE"), rs.getString("AUTHOR"), rs.getInt("BOOK_YEAR")) ).optional();
+                         .query((rs, rowNum) -> new Book(UUID.fromString(rs.getString("BOOK_ID")), 
+                                                         rs.getString("TITLE"), 
+                                                         rs.getString("AUTHOR"), 
+                                                         rs.getInt("BOOK_YEAR")))
+                         .optional();
     }
 
     @Override

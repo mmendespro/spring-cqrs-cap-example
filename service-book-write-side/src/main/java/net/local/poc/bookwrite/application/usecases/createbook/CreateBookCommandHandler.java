@@ -1,7 +1,6 @@
 package net.local.poc.bookwrite.application.usecases.createbook;
 
 import java.text.MessageFormat;
-import java.util.UUID;
 
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;

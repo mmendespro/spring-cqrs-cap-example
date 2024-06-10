@@ -58,6 +58,14 @@ Em sistemas distribuídos, é comum enfrentar o desafio de manter a consistênci
 
 O Teorema CAP afirma que em um sistema distribuído, é impossível garantir simultaneamente consistência, disponibilidade e tolerância a partições. Um sistema distribuído só pode garantir duas dessas propriedades ao mesmo tempo, sendo necessário fazer trade-offs entre elas.
 
+# Arquitetura proposta para o exemplo
+
+Para este exemplo faremos dois microsserviços, um responsável pela escrita dos dados e outro apenas para leitura. Também iremos guardar os eventos gerados (Event Sourcing) a fim de gerar a ideia de valor para a reconstrução da base de leitura através do replay destes eventos.
+
+A base de leitura será atualizada por um processo assincrono utilizando o RabbitMQ a fim de emular o padrão Transactional Outbox, mas poderia ser substituido facilmente por uma ferramenta de CDC de mercado, ou pelo mesmo processo via Kafka Connector com Debezium.
+
+![diagram.png](./img/diagram.png)
+
 # Conclusão
 
 A motivação por tras deste exemplo é fazer uma abordagem poderosa para lidar com operações de leitura e escrita de forma eficiente e escalável. Separando responsabilidades, e melhorando a manutenção e o desempenho do sistema.

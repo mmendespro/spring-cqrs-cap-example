@@ -62,7 +62,7 @@ O Teorema CAP afirma que em um sistema distribuído, é impossível garantir sim
 
 Para este exemplo faremos dois microsserviços, um responsável pela escrita dos dados e outro apenas para leitura. Também iremos guardar os eventos gerados (Event Sourcing) a fim de gerar a ideia de valor para a reconstrução da base de leitura através do replay destes eventos.
 
-A base de leitura será atualizada por um processo assincrono utilizando o RabbitMQ a fim de emular o padrão Transactional Outbox, mas poderia ser substituido facilmente por uma ferramenta de CDC de mercado, ou pelo mesmo processo via Kafka Connector com Debezium.
+A base de leitura será atualizada por um processo assincrono utilizando o RabbitMQ a fim de emular o padrão Transactional Outbox, mas poderia ser substituido facilmente por uma ferramenta de CDC de mercado (Kafka Connector com Debezium por exemplo).
 
 ![solution-diagram.png](./img/solution-diagram.png)
 
